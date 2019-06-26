@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <title></title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Sue+Ellen+Francisco&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Coffee!</h1>
+    <h1><span id="jk">JK</span> it's Coffee!</h1>
+    <hr>
     <div class="contain">
         <div class="divform">
             <form name="coffee" class="form">
@@ -19,7 +21,7 @@
                 </select><br>
                 <label class="formRoast" for="CoffeeName">Coffee Name</label><br>
                 <input class="formRoast" type="text" onkeyup="myFunction()" id="CoffeeName"><br>
-                <button class="formRoast" type="button" id="submit">Search</button>
+                <button class="formRoast" type="button" id="submit">Submit</button>
             </form><br>
             <form name="addcoffee" class="form">
                 <label class="formRoast" for="addroast">Roast</label><br>
@@ -28,9 +30,9 @@
                     <option>medium</option>
                     <option>dark</option>
                 </select><br>
-                <label class="formRoast" for="AddCoffee">Coffee Name</label><br>
+                <label class="formRoast" for="AddCoffee">Name</label><br>
                 <input class="formRoast" type="text" id="AddCoffee"><br>
-                <button class="formRoast" type="button" id="">Search</button>
+                <button class="formRoast" type="button" id="submit1">Submit</button>
             </form>
         </div>
         <div id="coffees"></div>
