@@ -12,8 +12,8 @@ function renderCoffee(coffee) {
 
 function renderCoffees(coffees) {
     var html = '';
-    for(var i = coffees.length - 1; i >= 0; i--) {
-        html += renderCoffee(coffees[i]);
+    for(var i = 1; coffees.length >= i; i++) {
+        html += renderCoffee(coffees[i-1]);
     }
     return html;
 }
@@ -55,3 +55,21 @@ var roastSelection = document.querySelector('#roast-selection');
 tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
+
+
+function myFunction() {
+    var input, filter, name, i, txtValue;
+    input = document.getElementById("CoffeeName");
+    filter = input.value.toUpperCase();
+    for (i = 0; i < coffees.length; i++) {
+        name = coffees[i].name;
+        // a = li[i].getElementsByTagName("a")[0];
+        // txtValue = name.textContent || name.innerText;
+        if (name.toUpperCase().indexOf(filter) > -1) {
+            console.log("in")
+        } else {
+            console.log("out");
+        }
+    }
+    console.log("done");
+}
