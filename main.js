@@ -2,12 +2,9 @@
 
 function renderCoffee(coffee) {
 
-    var html = '<tr class="coffee">';
-    html += '<td>' + coffee.id + '</td>';
-    html += '<td>' + coffee.name + '</td>';
-    html += '<td>' + coffee.roast + '</td>';
-    html += '</tr>';
-
+    var html = '<div class="coffee">';
+    html += coffee.name +' '+ '<span class="roast">'+ coffee.roast + '</span>';
+    html += '</div>';
 
 
     return html;
@@ -20,17 +17,23 @@ function renderCoffees(coffees) {
     }
     return html;
 }
+var filteredCoffees = [];
 
 function updateCoffees(e) {
+    filteredCoffees = [];
     e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
-    var filteredCoffees = [];
-    coffees.forEach(function(coffee) {
-        if (coffee.roast === selectedRoast) {
-            filteredCoffees.push(coffee);
-        }
-    });
-    tbody.innerHTML = renderCoffees(filteredCoffees);
+    if(selectedRoast === "all"){
+        tbody.innerHTML = renderCoffees(coffees);
+    } else {
+        coffees.forEach(function (coffee) {
+            if (coffee.roast === selectedRoast) {
+                filteredCoffees.push(coffee);
+            }
+        });
+        tbody.innerHTML = renderCoffees(filteredCoffees);
+    }
+    myFunction()
 }
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
@@ -54,10 +57,11 @@ var coffees = [
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
-
+var selectRoast = document.getElementById('roast-selection');
 tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
+selectRoast.addEventListener('change', updateCoffees);
 
 
 function myFunction() {
@@ -65,12 +69,19 @@ function myFunction() {
     input = document.getElementById("CoffeeName");
     filter = input.value.toUpperCase();
     var coffeeFilter = [];
-    for (i = 0; i < coffees.length; i++) {
-        name = coffees[i].name;
-
-        if (name.toUpperCase().indexOf(filter) > -1) {
-
-            coffeeFilter.push(coffees[i]);
+    if(filteredCoffees.length > 0) {
+        for (i = 0; i < filteredCoffees.length; i++) {
+            name = filteredCoffees[i].name;
+            if (name.toUpperCase().indexOf(filter) > -1) {
+                coffeeFilter.push(filteredCoffees[i]);
+            }
+        }
+    }else {
+        for (i = 0; i < coffees.length; i++) {
+            name = coffees[i].name;
+            if (name.toUpperCase().indexOf(filter) > -1) {
+                coffeeFilter.push(coffees[i]);
+            }
         }
     }
     tbody.innerHTML = renderCoffees(coffeeFilter)

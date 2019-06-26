@@ -1,9 +1,28 @@
-table {
-    border-collapse: collapse;
-    margin: 15px 0;
+
+
+#roast-selection{
+    width: 100%;
+
+}
+.formRoast{
+    margin:10px 0;
+}
+.divform{
+    box-sizing:border-box;
+    width: 40%;
+    float:right;
 }
 
-td, th {
-    border: 1px solid black;
-    padding: 5px 10px;
+.roast {
+    box-sizing: border-box;
+    color: grey;
+    font-size: 12px;
+}
+.coffee{
+    width: 50%;
+    display: inline-block;
+}
+#coffees {
+    box-sizing: border-box;
+    width: 60%;
 }

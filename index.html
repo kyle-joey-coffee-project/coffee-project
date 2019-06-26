@@ -7,28 +7,34 @@
 </head>
 <body>
     <h1>Coffee!</h1>
-
-    <form name="coffee">
-        <label for="roast-selection"></label>
-        <select id="roast-selection">
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
-        </select>
-        <label for="coffeeName">Coffee Name</label>
-        <input type="text" onkeyup="myFunction()" id="CoffeeName">
-        <button type="button" id="submit">Search</button>
-    </form>
-
-    <table>
-        <tr>
-            <th>ID</th>
-            <th>NAME</th>
-            <th>ROAST</th>
-        </tr>
-        <tbody id="coffees"></tbody>
-    </table>
-
+    <div class="contain">
+        <div class="divform">
+            <form name="coffee" class="form">
+                <label class="formRoast" for="roast-selection">Roast</label><br>
+                <select class="formRoast" id="roast-selection">
+                    <option>all</option>
+                    <option>light</option>
+                    <option>medium</option>
+                    <option>dark</option>
+                </select><br>
+                <label class="formRoast" for="CoffeeName">Coffee Name</label><br>
+                <input class="formRoast" type="text" onkeyup="myFunction()" id="CoffeeName"><br>
+                <button class="formRoast" type="button" id="submit">Search</button>
+            </form><br>
+            <form name="addcoffee" class="form">
+                <label class="formRoast" for="addroast">Roast</label><br>
+                <select class="formRoast" id="addroast">
+                    <option>light</option>
+                    <option>medium</option>
+                    <option>dark</option>
+                </select><br>
+                <label class="formRoast" for="AddCoffee">Coffee Name</label><br>
+                <input class="formRoast" type="text" id="AddCoffee"><br>
+                <button class="formRoast" type="button" id="">Search</button>
+            </form>
+        </div>
+        <div id="coffees"></div>
+    </div>
     <script src="main.js"></script>
 </body>
 </html>
