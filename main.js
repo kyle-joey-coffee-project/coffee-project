@@ -21,7 +21,7 @@ var filteredCoffees = [];
 
 function updateCoffees(e) {
     filteredCoffees = [];
-    e.preventDefault(); // don't submit the form, we just want to update the data
+    // e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
     if(selectedRoast === "all"){
         tbody.innerHTML = renderCoffees(coffees);
@@ -86,3 +86,14 @@ function myFunction() {
     }
     tbody.innerHTML = renderCoffees(coffeeFilter)
 }
+
+var addName = document.forms.adds.AddCoffee;
+var addRoast = document.forms.adds.addroast;
+var makeCoffee = function(name,roast){
+    var makeObj = {
+        name: name,
+        roast: roast
+    };
+    coffees.push(makeObj);
+    updateCoffees(coffees);
+};

@@ -23,16 +23,16 @@
                 <input class="formRoast" type="text" onkeyup="myFunction()" id="CoffeeName"><br>
                 <button class="formRoast" type="button" id="submit">Submit</button>
             </form><br>
-            <form name="addcoffee" class="form">
+            <form name="adds" class="form" id="adds">
                 <label class="formRoast" for="addroast">Roast</label><br>
-                <select class="formRoast" id="addroast">
+                <select class="formRoast" id="addroast" name="addroast">
                     <option>light</option>
                     <option>medium</option>
                     <option>dark</option>
                 </select><br>
                 <label class="formRoast" for="AddCoffee">Name</label><br>
-                <input class="formRoast" type="text" id="AddCoffee"><br>
-                <button class="formRoast" type="button" id="submit1">Submit</button>
+                <input class="formRoast" type="text" id="AddCoffee" name="AddCoffee"><br>
+                <button class="formRoast" type="button" id="submit1" onclick="makeCoffee(addName.value,addRoast.value)">Submit</button>
             </form>
         </div>
         <div id="coffees"></div>
