@@ -1,4 +1,20 @@
+body {
+    font-family: Arial;
+    background-image: url("coffeeshop-bg.jpg");
 
+}
+#jk {
+    color: #f4df42;
+}
+h1 {
+    text-align: center;
+    text-shadow: -.1px 0 black, 0 1px black, 1px 0 black, 0 -.1px black;
+    font-family: 'Sue Ellen Francisco', cursive;
+    font-size: 80px;
+    margin: 10px;
+    color: white;
+
+}
 
 #roast-selection{
     width: 100%;
@@ -6,23 +22,66 @@
 }
 .formRoast{
     margin:10px 0;
+
 }
 .divform{
     box-sizing:border-box;
     width: 40%;
     float:right;
+    background-color: rgba(0,0,0,.5);
 }
 
 .roast {
     box-sizing: border-box;
-    color: grey;
-    font-size: 12px;
+    color: #f4df42;
+    font-size: 26px;
+    font-weight: normal;
 }
 .coffee{
-    width: 50%;
+    width: 45%;
     display: inline-block;
+    font-size: 36px;
+    text-align: center;
+    margin: 10px;
+    box-sizing: border-box;
+    background-color: rgba(0,0,0,.5);
+    border-radius: 4px;
 }
 #coffees {
     box-sizing: border-box;
     width: 60%;
+    /*text-shadow: -.5px 0 white, 0 .5px white, .5px 0 white, 0 -.5px white;*/
+    color: white;
+    font-weight: bold;
+
+}
+#submit {
+    width: 100%;
+    background-color: rosybrown;
+    color: #f4df42;
+    padding: 5px;
+    text-align: center;
+    border-radius: 4px;
+}
+#CoffeeName {
+    width: 100%;
+    border-radius: 1px;
+
+}
+#submit1 {
+    width: 100%;
+    background-color: rosybrown;
+    color: #f4df42 ;
+    padding: 5px;
+    text-align: center;
+    border-radius: 4px;
+}
+#addroast {
+    width: 100%;
+}
+#AddCoffee {
+    width: 100%;
+}
+label {
+    color: white;
 }
