@@ -1,11 +1,14 @@
-"use strict"
+"use strict";
 
 function renderCoffee(coffee) {
+
     var html = '<tr class="coffee">';
     html += '<td>' + coffee.id + '</td>';
     html += '<td>' + coffee.name + '</td>';
     html += '<td>' + coffee.roast + '</td>';
     html += '</tr>';
+
+
 
     return html;
 }
@@ -58,18 +61,17 @@ submitButton.addEventListener('click', updateCoffees);
 
 
 function myFunction() {
-    var input, filter, name, i, txtValue;
+    var input, filter, name, i;
     input = document.getElementById("CoffeeName");
     filter = input.value.toUpperCase();
+    var coffeeFilter = [];
     for (i = 0; i < coffees.length; i++) {
         name = coffees[i].name;
-        // a = li[i].getElementsByTagName("a")[0];
-        // txtValue = name.textContent || name.innerText;
+
         if (name.toUpperCase().indexOf(filter) > -1) {
-            console.log("in")
-        } else {
-            console.log("out");
+
+            coffeeFilter.push(coffees[i]);
         }
     }
-    console.log("done");
+    tbody.innerHTML = renderCoffees(coffeeFilter)
 }
