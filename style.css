@@ -1,5 +1,5 @@
 body {
-    background: url("coffeeshop-bg.jpg");
+    background: url("brown.jpg");
 }
 #jk {
     color: #f4df42;
@@ -56,6 +56,8 @@ h3{
     /*text-shadow: -.5px 0 white, 0 .5px white, .5px 0 white, 0 -.5px white;*/
     color: white;
     font-weight: bold;
+    background-color: white;
+    margin: 0 20px;
 
 }
 #submit {
