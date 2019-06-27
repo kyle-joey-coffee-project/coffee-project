@@ -8,8 +8,19 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1><span id="jk">JK</span> it's Coffee!</h1>
-    <hr>
+    <div class="topnav">
+    <h1><span id="jk">Hot</span> Java</h1>
+        <div class="row">
+            <p class="navtop col-1"></p>
+            <a class='navtop col-2' href="">HOME</a>
+            <a class='navtop col-2' href="">SHOP ITEMS</a>
+            <img src="java.png" alt="coffee" class="col-2">
+            <a class='navtop col-2' href="">NEWS</a>
+            <a class='navtop col-2' href="">SPECIALS</a>
+            <p class="navtop col-1"></p>
+        </div>
+    </div>
+    <br>
     <div class="contain">
         <div class="divform">
             <form name="coffee" class="form">
@@ -26,21 +37,7 @@
                         </div>
                     </div>
                 </div>
-<!--                <label class="formRoast" for="roast-selection">Roast</label><br>-->
-<!--                <select class="formRoast" id="roast-selection">-->
-<!--                    <option class="">All</option>-->
-<!--                    <option class="">Light</option>-->
-<!--                    <option class="">Medium</option>-->
-<!--                    <option class="">dark</option>-->
-<!--                </select><br>-->
-<!--                <label class="formRoast" for="CoffeeName">Coffee Name</label><br>-->
-<!--                <input class="formRoast" type="text" onkeyup="myFunction()" id="CoffeeName"><br>-->
-<!--                <button class="formRoast" type="button" id="submit">Submit</button>-->
-
-            </form><br>
-
-
-
+            </form>
             <form name="adds" class="form" id="adds">
                 <h3>Add Your Favorite Coffee!</h3>
                 <div class="input-group">
@@ -59,7 +56,44 @@
             </form>
         </div>
         <div id="coffees"></div>
+        <br>
     </div>
+    <footer class="row">
+        <ul class="col-2">
+            <li class="footList main">About Us</li>
+            <li class="footList">Our Company</li>
+            <li class="footList">Investor Relations</li>
+            <li class="footList">Press Center</li>
+        </ul>
+        <ul class="col-2">
+            <li class="footList main">For Business</li>
+            <li class="footList">Office Coffee</li>
+            <li class="footList">Food Service</li>
+            <li class="footList">Suppliers</li>
+            <li class="footList">Landlord Support Center</li>
+        </ul>
+        <ul class="col-2">
+            <li class="footList main">Quick Links</li>
+            <li class="footList">My Account</li>
+            <li class="footList">Store Locator</li>
+            <li class="footList">Nutrition Info</li>
+            <li class="footList">Customer Service</li>
+        </ul>
+        <ul class="col-3">
+            <li class="footList main">Career</li>
+            <li class="footList">College Plan</li>
+            <li class="footList">Corporate Career</li>
+            <li class="footList">Manufacturing and Distribution</li>
+        </ul>
+        <p class="filler"></p>
+        <p class="side-foot">Hot Java</p>
+
+        <p class="col-12 copyright">©2019 JK and Java Coffee Company. All Rights Reserved</p>
+    </footer>
+
+
+
+
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>

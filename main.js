@@ -104,6 +104,8 @@ var makeCoffee = function(name,roast){
         name: name,
         roast: roast
     };
-    coffees.push(makeObj);
-    updateCoffees(coffees);
+    if(name !== "" && roast !== undefined ){
+        coffees.push(makeObj);
+        updateCoffees(coffees);
+    }
 };
