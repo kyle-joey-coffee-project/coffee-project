@@ -13,32 +13,40 @@
     <div class="contain">
         <div class="divform">
             <form name="coffee" class="form">
-                <label class="formRoast" for="roast-selection">Roast</label><br>
-                <select class="formRoast" id="roast-selection">
-                    <option class="">All</option>
-                    <option class="">Light</option>
-                    <option class="">Medium</option>
-                    <option class="">dark</option>
-                </select><br>
-                <label class="formRoast" for="CoffeeName">Coffee Name</label><br>
-                <input class="formRoast" type="text" onkeyup="myFunction()" id="CoffeeName"><br>
-                <button class="formRoast" type="button" id="submit">Submit</button>
+                <h3>Filter Coffees</h3>
+                <div class="input-group">
+                    <input type="text" class="form-control" id="CoffeeName" name="CoffeeName" onkeyup="myFunction()" aria-label="Text input with dropdown button" placeholder="Name of Coffee">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-secondary dropdown-toggle" id="roast-selection" name="roast-selection" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span id="buttonValue2">Select Roast</span></button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" onclick="filter('All')">All</a>
+                            <a class="dropdown-item" onclick="filter('Light')">Light</a>
+                            <a class="dropdown-item" onclick="filter('Medium')">Medium</a>
+                            <a class="dropdown-item" onclick="filter('Dark')">Dark</a>
+                        </div>
+                    </div>
+                </div>
+<!--                <label class="formRoast" for="roast-selection">Roast</label><br>-->
+<!--                <select class="formRoast" id="roast-selection">-->
+<!--                    <option class="">All</option>-->
+<!--                    <option class="">Light</option>-->
+<!--                    <option class="">Medium</option>-->
+<!--                    <option class="">dark</option>-->
+<!--                </select><br>-->
+<!--                <label class="formRoast" for="CoffeeName">Coffee Name</label><br>-->
+<!--                <input class="formRoast" type="text" onkeyup="myFunction()" id="CoffeeName"><br>-->
+<!--                <button class="formRoast" type="button" id="submit">Submit</button>-->
+
             </form><br>
+
+
+
             <form name="adds" class="form" id="adds">
                 <h3>Add Your Favorite Coffee!</h3>
-<!--                <label class="formRoast" for="addroast">Roast</label>-->
-<!--                <select class="formRoast" id="addroast" name="addroast">-->
-<!--                    <option>light</option>-->
-<!--                    <option>medium</option>-->
-<!--                    <option>dark</option>-->
-<!--                </select>-->
-<!--&lt;!&ndash;                <label class="formRoast" for="AddCoffee">Name</label>&ndash;&gt;-->
-<!--                <input class="formRoast" type="text" id="AddCoffee" name="AddCoffee"><br>-->
-
                 <div class="input-group">
                     <input type="text" class="form-control" id="AddCoffee" name="AddCoffee" aria-label="Text input with dropdown button" placeholder="Name of Coffee">
                     <div class="input-group-append">
-                        <button class="btn btn-outline-secondary dropdown-toggle" id="addroast" name="addroast" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span id="buttonValue">Select Roast</span></button>
+                        <button class="btn btn-outline-secondary dropdown-toggle" id="addroast" name="addroast" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span id="buttonValue1">Select Roast</span></button>
                         <div class="dropdown-menu">
                             <a class="dropdown-item" onclick="setValue('Light')">Light</a>
                             <a class="dropdown-item" onclick="setValue('Medium')">Medium</a>
